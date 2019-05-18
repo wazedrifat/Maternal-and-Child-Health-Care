@@ -1,0 +1,30 @@
+create table person
+(
+person_id      varchar2(100),
+
+name           varchar2(100),
+date_of_birth  date,
+email_address  varchar2(100),
+nationality    varchar2(100),
+blood_group    varchar2(100),
+religion       varchar2(100),
+gender         varchar2(100),
+city           varchar2(100),
+Zip_code       varchar2(100),
+street_name    varchar2(100),
+apartment_no   varchar2(100),
+constraint person_pk primary key(person_id)
+);
+
+insert into person values('P5001','Arnab','11-01-1982','arnab@gmail.com','Indian','B+','Islam','Male','Delhi','1400','Suvas-lane','14b');
+insert into person values('P5002','Tasfiq','01-03-1992','tasfiq99@gmail.com','Bangladeshi','A+','Islam','Male','Dinajpur','3000','Wazed-Road','124t');
+insert into person values('P5003','Rafi','04-11-1997','rafi72@gmail.com','Bangladeshi','B+','Islam','Male','Manikganj','1234','Seru Mia','2a');
+insert into person values('P5004','Zeniffer','12-03-1990','durahan54@gmail.com','Bangladeshi','AB+','Islam','FeMale','Dhaka','1300','Rifat-Road','13c');
+insert into person values('P5005','Tania Tasin','09-08-1980','Tania4@yahoo.com','Bangladeshi','AB-','Islam','FeMale','Dhaka','19200','Gulsan','132/c');
+insert into person values('P5006','Tahsin','05-07-2010','Tahsination@gmail.com','Bangladeshi','O+','Islam','Male','Dhaka','19200','Dhanmondi','1792/12');
+insert into person values('P5007','Mrs Smith','09-08-1980','smith9900@yahoo.com','Bangladeshi','A+','Islam','FeMale','Comilla','2000','Chasara','2/h');
+insert into person values('P5008','Rahima baugm','12-09-1983','rahima100@yahoo.com','Bangladeshi','B+','Islam','FeMale','Chadpur','4000','Ali road','1f');
+
+insert into person values(concat('P',to_char(person_id_Seq.nextval)),'Rahima baugm','12-09-1983','rahima100@yahoo.com','Bangladeshi','B+','Islam','FeMale','Chadpur','4000','Ali road','1f');
+
+select * from person ;

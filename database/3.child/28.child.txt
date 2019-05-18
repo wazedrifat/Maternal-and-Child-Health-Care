@@ -1,0 +1,31 @@
+create table Child
+(
+person_id      varchar2(100),
+
+name           varchar2(100),
+date_of_birth  date,
+email_address  varchar2(100),
+nationality    varchar2(100),
+blood_group    varchar2(100),
+religion       varchar2(100),
+gender         varchar2(100),
+city           varchar2(100),
+Zip_code       varchar2(100),
+street_name    varchar2(100),
+apartment_no   varchar2(100),
+
+father_id      varchar2(100),
+mother_id      varchar2(100),
+
+constraint child_pk primary key(person_id)
+);
+insert into Child values('P5010','Munna Mia','04-11-2004','munna72@gmail.com','Bangladeshi',
+'C+','Islam','Male','Asuganj','1100','','','F001','M001');
+insert into Child values('P5011','Rahim Uddin','05-01-2006','','Bangladeshi',
+'A+','Islam','Male','Dhanmondi','2100','Sahid Uddin','3b','F002','M002');
+insert into Child values('P5012','Karim Ullah','02-10-2008','karim102@gmail.com','Bangladeshi',
+'O+','Islam','Male','Mothijhil','1500','Komlapur','','F003','M003');
+insert into Child values('P5013','Rifat Ara','06-08-2009','','Bangladeshi',
+'AB+','Islam','Female','Maniknogor','1000','Koram Chor','','F003','M004');
+insert into Child values('P5014','Rifat Beaugm','06-08-2010','','Bangladeshi',
+'AB+','Islam','Female','Manikgonj','1000','Uttom Sorok','','F014','M014');

@@ -1,0 +1,21 @@
+create table supply_and_logistics
+(
+supply_id          varchar2(20),
+
+budget             int,
+supply_policy      varchar2(100),
+meeting_place      varchar2(100),
+supply_to_location varchar2(100),
+
+constraint  supply_and_logistics_pk primary key(supply_id),
+
+CONSTRAINT supply_and_logistics_ck CHECK(budget >=0)
+
+);
+
+insert into supply_and_logistics values('SP001',20000,'Poverty reduction','Mirpur','Jamalpur');
+insert into supply_and_logistics values('SP002',5000,'Assist orphan','Dhanmondi','Comilla');
+insert into supply_and_logistics values('SP003',15000,'Save Newborn','Banani','Dhaka');
+insert into supply_and_logistics values('SP004',25000,'Ensure Education','Dinazpur','Boroguni');
+
+insert into supply_and_logistics values(concat('SP00',to_char(supply_id_Seq.nextval)),35000,'Ensure Education','Chadpur','Kurigram');

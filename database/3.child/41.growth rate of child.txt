@@ -1,0 +1,18 @@
+create table growth_rate
+(
+date_of_record                 date,
+percentage_of_weight          int,
+percentage_of_height          int,
+percentage_of_hemoglobin      int,
+percentage_of_RBC             int,
+percentage_of_protein         int,
+blood_pressure            varchar2(15), 
+immunoglobulin     varchar2(30),
+               
+
+health_record_id   varchar2(15),
+
+constraint growth_rate_pk primary key(date_of_record,percentage_of_weight,percentage_of_height,percentage_of_hemoglobin,percentage_of_RBC,percentage_of_protein,blood_pressure,immunoglobulin,health_record_id),
+constraint growth_rate_fk foreign key(health_record_id) references health_record(health_record_id) on delete cascade
+
+);

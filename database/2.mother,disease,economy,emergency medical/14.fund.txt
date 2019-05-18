@@ -1,0 +1,27 @@
+create table Fund
+(
+record_no        varchar2(100),
+transaction_id   varchar(100),
+
+donor_name       varchar2(100),
+donated_amount   int,
+donor_address    varchar(100),
+spent_amount    int,
+
+sector_id     varchar2(100),
+
+constraint fund_pk primary key(record_no,transaction_id),
+
+CONSTRAINT fund_ck CHECK
+(
+donated_amount>=0 and spent_amount>=0 and transaction_id like 'T00_%'
+)
+);
+
+insert into fund values('01','T001','Abir','5000','12 no road Mirpur 2','5000','SO02');
+insert into fund values('02','T002','Wazed','10','17 no road Mirpur 12','2','S01');
+insert into fund values('03','T003','Zobair','100000','2 no road Gulshan 2','35000','SE01');
+insert into fund values('04','T004','Zahid','80000','2 no road Banani Fr Tower','65000','S03');
+insert into fund values(concat('0',to_char(record_no_Seq.nextval)),concat('T00',to_char(transaction_id_Seq.nextval)),'Zenith','80','Cantorment','65','SE3');//sequence
+
+select * from fund;

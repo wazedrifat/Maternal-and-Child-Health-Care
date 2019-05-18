@@ -1,0 +1,19 @@
+create table sequence_record(
+	sequence_name varchar2(100),
+	table_name varchar2(100),
+	column_name varchar2(100),
+	prefix varchar2(50)
+);
+
+insert into sequence_record values('person_id_Seq', 'PERSON', 'PERSON_ID', 'P500');
+insert into sequence_record values('social_id_Seq', 'SOCIO_ECONOMIC_HISTORY', 'SOCIAL_ID', 'SO0');
+insert into sequence_record values('disease_id_Seq', 'DISEASE', 'DISEASE_ID', '');
+insert into sequence_record values('service_id_Seq', 'EMERGENCY_MEDICAL_SUPPORT', 'SERVICE_ID', '');
+insert into sequence_record values('education_id_Seq', 'EDUCATION', 'EDUCATION_ID', '');
+insert into sequence_record values('record_no_Seq', 'FUND', 'RECORD_NO', 'T00');
+insert into sequence_record values('supply_id_Seq', 'SUPPLY_AND_LOGISTICS', 'SUPPLY_ID', '');
+
+
+
+
+select sequence_name, column_name from sequence_record where table_name = '${req.params.table}'

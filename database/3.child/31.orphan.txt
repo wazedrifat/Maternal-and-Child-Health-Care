@@ -1,0 +1,36 @@
+create table Orphan
+(
+person_id      varchar2(100),
+name           varchar2(100),
+date_of_birth  date,
+email_address  varchar2(100),
+nationality    varchar2(100),
+blood_group    varchar2(100),
+religion       varchar2(100),
+gender         varchar2(100),
+city           varchar2(100),
+Zip_code       varchar2(100),
+street_name    varchar2(100),
+apartment_no   varchar2(100),
+
+father_id      varchar2(100),
+mother_id      varchar2(100),
+
+fathers_date_of_death   date,
+mothers_date_of_death   date,
+
+fathers_cause_of_death   varchar2(100),
+mothers_cause_of_death   varchar2(100),
+families_looking_for_adoption  int,
+date_of_adoption               date,
+date_of_entry                  date,
+
+constraint orphan_pk primary key(person_id)
+);
+--has multival table orphans_relative
+insert into Orphan values('P5020','Rahim Alom','04-11-2003','rahim72@gmail.com','Bangladeshi',
+'B+','Islam','Male','Tongi','1200','Sohid Motin','2d','F011','M011','06-10-2004','','Cancer','',3,'10-10-2010','05-01-2007');
+insert into Orphan values('P5021','Karim Ullah','12-12-2002','karim82@gmail.com','Bangladeshi',
+'B-','Islam','Male','Tangail','1600','Sohid Motin','2d','F012','M012','04-07-2004','08-08-2005','Cancer','Heart Attack','2','10-10-2009','05-05-2007');
+insert into Orphan values('P5022','Sadia Ahmed','04-09-2004','sadia72@gmail.com','Bangladeshi',
+'B+','Islam','Female','Bogra','1160','Fokir Road','41c','F013','M013','05-05-2005','05-05-2005','Accident','Accidenet',0,'','06-05-2012');

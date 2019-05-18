@@ -1,0 +1,15 @@
+create table disease_history
+(
+disease_id   varchar2(15),
+person_id   varchar2(35),
+
+constraint disease_history_fk1 foreign key(person_id) references person(person_id) on delete cascade,
+constraint disease_history_fk2 foreign key(disease_id) references disease(disease_id) on delete cascade,
+constraint disease_history primary key(disease_id,person_id)
+);
+--relation between person and disease
+insert into disease_history values ('D001','P5001');
+insert into disease_history values ('D002','P5004');
+insert into disease_history values ('D003','P5004');
+insert into disease_history values ('D004','P5008');
+insert into disease_history values ('D007','P5008');

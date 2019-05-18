@@ -1,0 +1,18 @@
+create table pregnancy_disease
+(
+disease_id   varchar2(100),
+patient_id   varchar2(100),
+date_of_visit   date,
+
+constraint pregnancy_disease_fk1 foreign key(patient_id,date_of_visit) references during_pregnancy_report(patient_id,date_of_visit) on delete cascade,
+constraint pregnancy_disease_fk2 foreign key(disease_id) references disease(disease_id) on delete cascade,
+constraint pregnancy_disease_pk primary key(disease_id,patient_id,date_of_visit)
+
+);
+
+--relaion between during_pregnancy_report and disease
+
+
+insert into pregnancy_disease values('D002','PP001',to_date('23-Feb-2010','DD-MON-YYYY'));
+insert into pregnancy_disease values('D003','PP001',to_date('27-Feb-2010','DD-MON-YYYY'));
+insert into pregnancy_disease values('D004','PP004',to_date('10-May-2013','DD-MON-YYYY'));

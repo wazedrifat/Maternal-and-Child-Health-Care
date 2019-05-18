@@ -1,0 +1,18 @@
+create table result_of_child
+(
+class          int,
+result         varchar2(100),
+
+education_id   varchar2(100),
+
+constraint result_of_child_pk primary key(class,result,education_id),
+constraint result_of_child_fk foreign key(education_id) references education(education_id)on delete cascade
+);
+
+--multival of education
+insert into result_of_child values(5,'65% marks obtained','E001');
+insert into result_of_child values(6,'72% marks obtained','E001');
+insert into result_of_child values(8,'80% marks obtained','E001');
+insert into result_of_child values(7,'75% marks obtained','E004');
+insert into result_of_child values(5,'65% marks obtained','E003');
+insert into result_of_child values(7,'82% marks obtained','E002');

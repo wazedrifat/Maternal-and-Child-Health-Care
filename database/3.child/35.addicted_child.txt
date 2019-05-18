@@ -1,0 +1,29 @@
+create table addicted_child
+(
+person_id      varchar2(100),
+
+name           varchar2(100),
+date_of_birth  date,
+email_address  varchar2(100),
+nationality    varchar2(100),
+blood_group    varchar2(100),
+religion       varchar2(100),
+gender         varchar2(100),
+city           varchar2(100),
+Zip_code       varchar2(100),
+street_name    varchar2(100),
+apartment_no   varchar2(10),
+
+father_id      varchar2(100),
+mother_id      varchar2(100),
+
+constraint addicted_child_pk primary key(person_id)
+);
+
+--has multival table addiction
+insert into addicted_child values('P5028','Seikh Zaber','07-11-2005','Zaber690@gmail.com','Bangladeshi',
+'B+','Islam','Male','Munsiganj','1000','Uttom Sorok','86c','F020','M020');
+insert into addicted_child values('P5029','Zobair Zenith','10-12-2006','munna420@gmail.com','Bangladeshi',
+'A+','Islam','Male','Dhaka','1207','Motin Road','8r','F021','M021');
+insert into addicted_child values('P5030','Wazed Rifat','10-12-2006','rifat420@gmail.com','Bangladeshi',
+'A-','Islam','Male','Dhaka','1210','Bijoy Sorok','5/t','F022','M022');

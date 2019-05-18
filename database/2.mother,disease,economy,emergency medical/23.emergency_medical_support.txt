@@ -1,0 +1,25 @@
+create table emergency_medical_support
+(
+service_id       varchar2(100),
+
+doctors_name            varchar2(100),
+location                varchar2(100),
+hospital_clinic_name    varchar2(100),
+health_worker_address   varchar2(100),
+health_worker_id        varchar2(100),
+previous_job            varchar2(100),
+health_worker_name      varchar2(100),
+constraint emergency_medical_support_pk primary key(service_id),
+CONSTRAINT UC_emergency_medical_support UNIQUE (health_worker_id)
+);
+
+insert into emergency_medical_support values('SI001','Anjum Aara','Dhaka','Dhaka Medical','Jamalpur Sodor','H001','Student','Rifat Beaugm');
+insert into emergency_medical_support values('SI002','Rabeya Khatun','Rongpur','Rongpur Clinic','Kutilmari Rongpur','H002','Business','Tabassum ');
+insert into emergency_medical_support values('SI003','Rahima Islam','Chadpur','Chadpur Clinic','Rupnogor Chadpur','H003','Student','Rifat Beaugm');
+insert into emergency_medical_support values('SI004','Sofia Alam','Siranjjong','Anondo Clinic','Bagerhat','H004','Garments Worker','Arifa Islam');
+insert into emergency_medical_support values('SI005','Rafa Islam','Dhaka','Dhaka Medical','Dhaka','H005','Student','Sadia Mim');
+insert into emergency_medical_support values('SI006','Sadia Hasan','Comilla','Comilla Medical','Kurigram','H006','Student','Nadira Islam');
+
+
+insert into emergency_medical_support values(concat('SI00',to_char(service_id_Seq.nextval)),'Sadia Mim','Kisorgonj','Hasimukh Clinic','Kurigram','H007','Student','Tarana Islam');
+insert into emergency_medical_support values(concat('SI00',to_char(service_id_Seq.nextval)),'Sadia Mim','Kisorgonj','Hasimukh Clinic','Kurigram',concat('H00',to_char(health_worker_id_Seq.nextval)),'Student','Tarana Islam');

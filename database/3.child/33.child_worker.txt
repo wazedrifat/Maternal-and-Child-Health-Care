@@ -1,0 +1,37 @@
+create table child_worker
+(
+person_id      varchar2(100),
+
+name           varchar2(100),
+date_of_birth  date,
+email_address  varchar2(100),
+nationality    varchar2(100),
+blood_group    varchar2(100),
+religion       varchar2(100),
+gender         varchar2(100),
+city           varchar2(100),
+Zip_code       varchar2(100),
+street_name    varchar2(200),
+apartment_no   varchar2(100),
+
+father_id      varchar2(100),
+mother_id      varchar2(100),
+
+cause                  varchar2(100),
+total_monthly_income   int,
+working_area           varchar2(100),
+daily_work_hour        int,
+working_type           varchar2(100),
+
+constraint child_worker_pk primary key(person_id)
+);
+--has multival table accidents_in_workplace
+
+insert into child_worker values('P5023','Nafiza','04-07-2005','nfz65@gmail.com','Bangladeshi',
+'A+','Islam','Female','Dhaka','1100','Nurzaman Road','','F014','M014','Poverty',2500,'Mirpur',10,'Domestic work');
+insert into child_worker values('P5024','Nafiz','08-08-2010','nafiz65@gmail.com','Bangladeshi',
+'A+','Islam','Male','Dhaka','1100','Basir Road','','F015','M015','Poverty',3500,'Mirpur',8,'Electrician');
+insert into child_worker values('P5025','Nibir Hasan','11-11-2011','nbir65@gmail.com','Bangladeshi',
+'A-','Islam','Male','Kurigram','1100','Pori Road','','F016','M016','Poverty',1500,'Kurigram',9,'Agriculture');
+insert into child_worker values('P5026','Tonmay Hasan','11-11-2009','tonmay65@gmail.com','Bangladeshi',
+'A-','Islam','Male','Pabna','1300','Jamal Road','','F017','M018','Poverty',4000,'Pabna',7,'Car Workshop');

@@ -1,0 +1,17 @@
+create table emergency_medical_supply
+(
+supply_id          varchar2(100),
+service_id   varchar2(100),
+
+constraint emergency_medical_supply_fk1 foreign key(service_id) references emergency_medical_support(service_id) on delete cascade,
+constraint emergency_medical_supply_fk2 foreign key(supply_id) references supply_and_logistics(supply_id) on delete cascade,
+constraint emergency_medical_supply primary key(supply_id,service_id)
+
+);
+
+--relation between supply_and_logistics and emergency_medical_support
+
+insert into emergency_medical_supply values('SI005','SP001');
+insert into emergency_medical_supply values('SI006','SP002');
+
+--error

@@ -1,0 +1,35 @@
+create table disabled_child
+(
+person_id      varchar2(100),
+
+name           varchar2(100),
+date_of_birth  date,
+email_address  varchar2(100),
+nationality    varchar2(100),
+blood_group    varchar2(100),
+religion       varchar2(100),
+gender         varchar2(100),
+city           varchar2(100),
+Zip_code       varchar2(100),
+street_name    varchar2(100),
+apartment_no   varchar2(100),
+
+father_id      varchar2(100),
+mother_id      varchar2(100),
+
+disability_type    varchar2(100),
+disability_or_disorder_name   varchar2(100),
+age_of_detection    varchar2(100),
+cause                varchar2(100),
+
+constraint disabled_child_pk primary key(person_id)
+);
+insert into disabled_child values('P5017','Araf Rahman','06-12-2007','araf777@gmail.com','Bangladeshi',
+'B+','Islam','Male','Banani','4500','Abdul Road','5/r','F008','M008','Vision Impairment','Blindless',3,'Macular degeneration');
+insert into disabled_child values('P5018','Fahim Failsal','01-12-2009','faim90@gmail.com','Bangladeshi',
+'B-','Islam','Male','Kurigram','2500','Kalam Road','2c','F009','M009','Mental Disability','Autism Spectrum Disorder',5,'Prenatal Viral Infection');
+insert into disabled_child values('P5019','Shipon Alon','06-08-2007','alon420@gmail.com','Bangladeshi',
+'O+','Islam','Male','Rangpur','3500','Kamal Road','2d','F010','M010','Vision Impairment','Physical Disability',1,'Abnormal Development of the Brain');
+
+
+--age=year

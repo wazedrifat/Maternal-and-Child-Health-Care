@@ -1,0 +1,32 @@
+create table mothers_pregnancy_info
+(
+person_id      varchar2(100),
+
+name           varchar2(100),
+date_of_birth  date,
+email_address  varchar2(100),
+nationality    varchar2(100),
+blood_group    varchar2(100),
+religion       varchar2(100),
+gender         varchar2(100),
+city           varchar2(100),
+Zip_code       varchar2(100),
+street_name    varchar2(100),
+apartment_no   varchar2(100),
+
+gravidity      int,
+parity         int,
+LMP_date       date,
+previous_delivary_place   varchar2(100),
+
+constraint mothers_pregnancy_info_pk primary key(person_id),
+constraint mothers_pregnancy_info_fk foreign key(person_id) references person(person_id) on delete cascade,
+CONSTRAINT mothers_pregnancy_info_ck CHECK(gravidity>=0 and parity>=0)
+
+);
+--has multival table medicine
+insert into mothers_pregnancy_info values('P5001','Zeniffer','12-03-1990','durahan54@gmail.com','Bangladeshi','AB+','Islam','FeMale','Dhaka','1300','Rifat-Road','13c','3','3','12-03-2010','CMH');
+insert into mothers_pregnancy_info values('P5004','Zeniffer','12-03-1990','durahan54@gmail.com','Bangladeshi','AB+','Islam','FeMale','Dhaka','1300','Rifat-Road','13c','3','3','12-03-2010','CMH');
+insert into mothers_pregnancy_info values('P5005','Tania Tasin','09-08-1980','Tania4@yahoo.com','Bangladeshi','AB-','Islam','FeMale','Dhaka','19200','Dhanmondi','132/c','3','2','11-01-2012','Dhaka Medical');
+insert into mothers_pregnancy_info values('P5007','Mrs Smith','09-08-1980','smith9900@yahoo.com','Bangladeshi','A+','Islam','FeMale','Comilla','2000','Chasara','2/h','5','4','11-01-2010','Narayanganj clinic');
+insert into mothers_pregnancy_info values('P5008','Rahima baugm','12-09-1983','rahima100@yahoo.com','Bangladeshi','B+','Islam','FeMale','Chadpur','4000','Ali road','1f','1','2','12-05-2013','Chadpur Medical');

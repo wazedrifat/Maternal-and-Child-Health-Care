@@ -1,0 +1,14 @@
+create table supply_for_child
+(
+
+person_id      varchar2(100),
+
+supply_id          varchar2(100),
+
+constraint  supply_for_child_pk primary key(supply_id,person_id)
+
+
+);
+
+
+--relation between child and supply_and_logistics

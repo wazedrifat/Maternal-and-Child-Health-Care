@@ -1,0 +1,13 @@
+create table orphans_relative
+(
+relative_name  varchar2(100),
+relation       varchar2(100),
+person_id      varchar2(100),
+constraint orphans_relative_pk primary key(relation,relative_name,person_id),
+constraint orphans_relative_fk foreign key(person_id) references orphan(person_id) on delete cascade
+);
+
+--multival of orphan
+insert into orphans_relative values('Karimullah','Uncle','P5020');
+insert into orphans_relative values('Rashedul Islam','Uncle','P5020');
+insert into orphans_relative values('Rabaya Akhter','Annt','P5021');

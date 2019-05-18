@@ -1,0 +1,33 @@
+create table uprooted_child
+(
+person_id      varchar2(100),
+
+name           varchar2(100),
+date_of_birth  date,
+email_address  varchar2(100),
+nationality    varchar2(100),
+blood_group    varchar2(100),
+religion       varchar2(100),
+gender         varchar2(100),
+city           varchar2(100),
+Zip_code       varchar2(100),
+street_name    varchar2(100),
+apartment_no   varchar2(100),
+
+father_id      varchar2(100),
+mother_id      varchar2(100),
+
+cause          varchar2(100),
+homeland       varchar2(100),
+camp_location  varchar2(100),
+asylum_applicant  varchar2(100),
+refugee         varchar2(100),
+
+constraint uprooted_child_pk primary key(person_id)
+);
+insert into uprooted_child values('P5014','Adiba Rahman','06-10-2011','rohingawelfare@gmail.com','Myanmarese',
+'B+','Islam','Female','Coxs Bazar','1700','Abul Road','','F005','M005','Racism','Myanmar','Coxs Bazar','NO','YES');
+insert into uprooted_child values('P5015','Samiul Haque','08-12-2010','rohingawelfare@gmail.com','Myanmarese',
+'AB+','Islam','Male','Chittagong','1800','Paikpara Road','','F006','M006','Racism','Myanmar','Chittagong','YES','YES');
+insert into uprooted_child values('P5016','Abd al-Uzza','09-04-2012','','Syrian',
+'A+','Islam','Male','Barisal','2000','Jamir Ali Road','','F007','M007','War','Syria','','YES','NO');
